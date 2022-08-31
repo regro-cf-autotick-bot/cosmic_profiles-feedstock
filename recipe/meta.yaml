@@ -23,14 +23,14 @@ requirements:
     - libgomp  # [linux]
     - llvm-openmp  # [osx]
   host:
-    - python
+    - python <3.10
     - pip
     - setuptools
     - cython
     - cythongsl
     - numpy >=1.19.2
   run:
-    - python
+    - python <3.10
     - {{ pin_compatible('numpy') }}
     - scipy
     - matplotlib-base
