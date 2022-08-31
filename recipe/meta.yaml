@@ -39,7 +39,7 @@ requirements:
     - cythongsl
     - mpi4py
     - pathos
-    - h5py <3.2
+    - h5py
     - psutil
     - openmpi =4.0.4  # [linux]
     - mpich  # [osx]
