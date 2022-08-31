@@ -10,6 +10,7 @@ source:
   sha256: c1bcb2e626e7970f33325c1ac2c90d6b03b5c47f0e73eac01a344c169bd13b5e
 
 build:
+  noarch: python
   script_env:
     - OMPI_MCA_plm_rsh_agent=  # [linux]
   number: 0
