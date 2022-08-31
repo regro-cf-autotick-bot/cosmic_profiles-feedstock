@@ -1,5 +1,5 @@
 {% set name = "cosmic_profiles" %}
-{% set version = "1.2.6" %}
+{% set version = "1.2.7" %}
 
 package:
   name: {{ name|lower }}
@@ -39,6 +39,7 @@ requirements:
     - cythongsl
     - mpi4py
     - pathos
+    - hdf5
     - h5py <3.2
     - psutil
     - openmpi =4.0.4  # [linux]
