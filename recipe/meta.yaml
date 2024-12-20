@@ -6,19 +6,20 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
   sha256: 66c16c8baf783c281c8b29f3317596982bc788f8f8806488f3f5c3eb451b2c2c
 
 build:
   script_env:
     - OMPI_MCA_plm_rsh_agent=  # [linux]
-  number: 0
+  number: 1
   script: {{ PYTHON }} -m pip install --no-deps --ignore-installed .
 
 requirements:
   build:
     - cmake
     - {{ compiler('c') }}
+    - {{ stdlib("c") }}
     - {{ compiler('cxx') }}
     - libgomp  # [linux]
     - llvm-openmp  # [osx]
